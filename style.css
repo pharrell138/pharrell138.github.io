@@ -132,9 +132,14 @@ body{
     overflow:hidden;
 	border: solid 3px black;
 	width: 100%;
+	touch-action:none; 
 }
 
-
+#GameArena:fullscreen {
+    width: 100vw;
+    height: 100vh;
+	background: white;
+}
 
 #arena{
 	position:relative;
@@ -142,6 +147,7 @@ body{
     overflow:hidden;
     background:lightgreen;
 	cursor:none;
+	touch-action: none;
 }
 
 #bee{
@@ -180,4 +186,14 @@ body{
 #quiz{
 	border:solid 3px black;
 	margin-top: 10px;
+}
+#qrCodeImg{
+    width:150px;
+}
+@media (max-width:800px){
+
+    #qrCode{
+        display:none;
+    }
+
 }

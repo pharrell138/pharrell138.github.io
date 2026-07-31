@@ -98,7 +98,8 @@ function beeMove(event){
 
     // phone
     if(event.touches){
-
+		
+		event.preventDefault();
         x = event.touches[0].clientX;
         y = event.touches[0].clientY;
 
@@ -357,6 +358,9 @@ playBtn.addEventListener("click",function(){
 
     game.style.display = "none";
     GameArena.style.display = "block";
+	if(GameArena.requestFullscreen){
+        GameArena.requestFullscreen();
+    }
 	
     startGame();
 });
